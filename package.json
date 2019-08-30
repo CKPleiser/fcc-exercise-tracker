@@ -1,0 +1,28 @@
+{
+  "name": "exercise-tracker",
+  "version": "1.0.0",
+  "description": "A simple exercise tracker as part of the Free Code Camp APIs &amp; Microservices Project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CKPleiser/fcc-exercise-tracker.git"
+  },
+  "author": "Carsten Pleiser",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CKPleiser/fcc-exercise-tracker/issues"
+  },
+  "homepage": "https://github.com/CKPleiser/fcc-exercise-tracker#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.6.11"
+  },
+  "devDependencies": {
+    "dotenv": "^8.1.0"
+  }
+}
