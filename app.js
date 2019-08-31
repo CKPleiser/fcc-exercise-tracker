@@ -34,6 +34,6 @@ app.get('/', (req, res) => {
 
 // Routes
 app.use('/api/v1/users', userRouter)
-app.use('/api/v1/exercise', exerciseRouter)
+app.use('/api/v1/exercises', exerciseRouter)
 
 module.exports = app;

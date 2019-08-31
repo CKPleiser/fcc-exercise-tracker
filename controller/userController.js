@@ -1,22 +1,15 @@
 const User = require('./../models/userModel');
+const catchAsync = require('./../utils/catchAsync');
 
-exports.createUser = async (req, res) => {
-  try {
-    const newUser = await User.create(req.body);
-    res.status(201).json({
-      status: 'success',
-      user: newUser
-    });
-  } catch (err) {
-    res.status(500).json({
-      status: 'error',
-      message: `Something went wrong here. Error: ${err}`
-    });
-  }
-};
+exports.createUser = catchAsync(async (req, res, next) => {
+  const newUser = await User.create(req.body);
+  res.status(201).json({
+    status: 'success',
+    user: newUser
+  });
+});
 
-exports.getAllUsers = async (req, res) => {
-  try {
+exports.getAllUsers = catchAsync(async (req, res, next) => {
     const users = await User.find();
 
     res.status(200).json({
@@ -24,27 +17,17 @@ exports.getAllUsers = async (req, res) => {
       results: users.length,
       data: { users }
     });
-  } catch (err) {
-    res.status(500).json({
-      status: 'error',
-      message: `Something went wrong here. Error: ${err}`
-    });
-  }
-}
+});
 
-exports.getLog = async (req, res, next) => {
-  try {
-    const log = await User.findById(req.params.id).populate('exercises');
+exports.getLog = catchAsync(async (req, res, next) => {
+  let filter = {};
+  let userId = req.params.id;
 
-    res.status(200).json({
-      status: 'success',
-      data: { log }
-    })
+  const log = await User.findById(userId)
+                          .populate('exercises')
 
-  } catch (err) {
-    res.status(500).json({
-      status: 'error',
-      message: `Something went wrong here. Error: ${err}`
-    });
-  }
-}
+  res.status(200).json({
+    status: 'success',
+    data: { log }
+  });
+});
