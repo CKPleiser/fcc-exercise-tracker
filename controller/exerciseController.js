@@ -1,13 +1,16 @@
 const Exercise = require('./../models/exerciseModel');
+const isValidDate = require('./../utils/isValidDate');
 
 exports.addExercise = async (req, res) => {
   try {
-    const newExercise = await Exercise.create({
-      user: req.body.userid,
+    let newExercise = await Exercise.create({
+      user: req.body.userId,
       description: req.body.description,
       duration: req.body.duration,
-      date: req.body.date
     });
+
+    let exerciseDate = req.body.date ? new Date(req.body.date) : new Date();
+    newExercise.date = exerciseDate;
 
     res.status(201).json({
       status: 'success',

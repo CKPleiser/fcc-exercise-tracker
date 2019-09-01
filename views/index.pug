@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    title Exercise Tracker | Free Code Camp
+    link(rel='shortcut icon' href='https://cdn.hyperdev.com/us-east-1%3A52a203ff-088b-420f-81be-45bf559d01b1%2Ffavicon.ico' type='image/x-icon')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto' type='text/css')
+    link(rel='stylesheet' href='/css/style.css' type='text/css')
+
+  body
+    .container
+      h1 Exercise Tracker
+      form(action="/api/v1/users/new-user" method="post")
+        h3 Create a New User
+        input(id="uname" type="text" name="username" placeholder="username")
+        input(type="submit" value="Submit")
+      form(action="/api/v1/exercises" method="post")
+        h3 Add exercises
+        input(id="uid" type="text" name="userId" placeholder="userId")
+        input(id="desc" type="text" name="description" placeholder="description*")
+        input(id="dur" type="text" name="duration" placeholder="duration* (mins.)")
+        input(id="dat" type="text" name="date" placeholder="date (yyyy-mm-dd")
+        input(type="submit" value="Submit")

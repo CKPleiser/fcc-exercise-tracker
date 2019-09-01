@@ -20,7 +20,8 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
-    "mongoose": "^5.6.11"
+    "mongoose": "^5.6.11",
+    "pug": "^2.0.4"
   },
   "devDependencies": {
     "dotenv": "^8.1.0"
