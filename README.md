@@ -4,7 +4,7 @@
 
 This app was created as part of the APIs and Microservices project on [FreeCodeCamp](https://www.freecodecamp.org)
 
-** LIVE VERSION:** [Exercise Tracker](https://ckpleiser-fcc-exercise-tracker-1.glitch.me/)
+**LIVE VERSION:** [Exercise Tracker](https://ckpleiser-fcc-exercise-tracker-1.glitch.me/)
 
 ## User Stories
 
