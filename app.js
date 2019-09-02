@@ -1,5 +1,8 @@
 const path = require('path');
 const express = require('express');
+var cors = require('cors');
+const helmet = require('helmet');
+const mongoSanitize = require('express-mongo-sanitize');
 const bodyParser = require('body-parser');
 const userRouter = require('./routes/userRoutes')
 const exerciseRouter = require('./routes/exerciseRoutes')
@@ -12,19 +15,23 @@ const app = express();
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
 
-// Middelware Goes Here
+// Setting static files
+app.use(express.static('public'));
+
+// GLOBAL MIDDLEWARE
+
+// Set security HTTP headers
+app.use(helmet());
+
+// Use Cors
+app.use(cors())
+
+// Body parser, reading data from body into req.body
 app.use(express.json({ limit: '10kb' }));
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use(express.static('public'));
-
-// // Testing the endpoint
-// app.get('/', (req, res) => {
-//   res.status(200).json({
-//     status: 'success',
-//     message: 'This works!'
-//   })
-// })
+// Data sanitization against NOSQL query injection
+app.use(mongoSanitize());
 
 // Routes
 app.use('/', viewRouter)
