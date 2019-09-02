@@ -20,10 +20,10 @@ This app was created as part of the APIs and Microservices project on [FreeCodeC
 2. Run `npm install` in your bash/command line
 3. Create a local `config.env` environment variable and update accordingly
 
-- NODE*ENV=\_development or production*
+- NODE_ENV= _development or production_
 - PORT=_your port, e.g. 3000_
 - DATABASE=_your mongodb uri_
-- DATABASE*PASSWORD=\_your mongodb password*
+- DATABASE_PASSWORD=_your mongodb password_
 
 4. Run `npm start` in your bash/command line
 
