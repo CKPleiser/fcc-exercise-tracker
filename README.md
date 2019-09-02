@@ -37,3 +37,4 @@ This app was created as part of the APIs and Microservices project on [FreeCodeC
 
 - [ ] Add handler Factory to be more DRY and making the app future proof
 - [ ] Better Error Handling
+- [ ] Fix Duplicate Key Error
