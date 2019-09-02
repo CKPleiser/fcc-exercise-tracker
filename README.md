@@ -32,3 +32,8 @@ This app was created as part of the APIs and Microservices project on [FreeCodeC
 - Uses [Express](https://www.npmjs.com/package/express)
 - Uses Server-side rendering via PUG templates
 - Uses [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
+
+## To Do's
+
+- [ ] Add handler Factory to be more DRY and making the app future proof
+- [ ] Better Error Handling
