@@ -4,8 +4,8 @@
   "description": "A simple exercise tracker as part of the Free Code Camp APIs &amp; Microservices Project",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "build": "node server.js"
   },
   "repository": {
     "type": "git",
