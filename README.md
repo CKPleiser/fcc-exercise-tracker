@@ -4,7 +4,7 @@
 
 This app was created as part of the APIs and Microservices project on [FreeCodeCamp](https://www.freecodecamp.org)
 
-**LIVE VERSION:** [Exercise Tracker](https://ckpleiser-fcc-exercise-tracker-1.glitch.me/)
+**LIVE VERSION:** [Exercise Tracker](https://ckpleiser-fcc-exercise-tracker.glitch.me/)
 
 ## User Stories
 
@@ -37,4 +37,3 @@ This app was created as part of the APIs and Microservices project on [FreeCodeC
 
 - [ ] Add handler Factory to be more DRY and making the app future proof
 - [ ] Better Error Handling
-- [ ] Fix Duplicate Key Error
